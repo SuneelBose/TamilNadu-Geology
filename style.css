@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00a2ff;
+    color: white;
+    font-size: 20px;
+}
+
+#districtFilter {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+/* Main Layout - Flexbox */
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #04d3ee;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Area Indicator */
+#areaDisplay {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase; /* Makes text uppercase */
+}
+
+/* Bottom Bar Chart */
+#barChartContainer {
+    flex-grow: 1;
+    height: 200px; /* Adjust according to need */
+    overflow-y: scroll;
+}
+
+/* Main Map */
+#map {
+    flex-grow: 2;
+    position: relative;
+    height: 100%;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* Legends Section */
+#legends {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 90vh; /* Adjust this for scroll */
+}
+
+/* Legend Item Style */
+.category-legend {
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word; /* Ensure the text wraps */
+}
+
+/* Hover Effect on Legends */
+.category-legend:hover {
+    background-color: #324d69;
+}
+
+/* Style for the District Filter and Total Area */
+#districtFilter, #areaDisplay {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Scrollable containers for content */
+.scrollable-container {
+    overflow-y: auto;
+}
+
+/* Map container style for keeping map inside the main area */
+#map {
+    height: 100%;
+}
+
+/* Ensuring content in left sidebar doesn't overlap */
+#areaDisplay, #barChartContainer {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Bottom Bar Chart Overflow Handling */
+#barChartContainer {
+    overflow-y: auto;
+}
+
+/* Legends - Scrollable */
+#legends {
+    max-height: 80vh; /* Adjust the height as per the requirement */
+    overflow-y: auto;
+}
+
+/* Prevent text from being cut off or overlapping */
+.category-legend {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Other Elements */
+h1, h2 {
+    text-align: center;
+}
+
+/* Ensuring the left sidebar text wraps properly */
+.left-sidebar {
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#areaDisplay {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase; /* Make the text capitalized */
+    word-wrap: break-word; /* Allow text to wrap to the next line if needed */
+    white-space: normal; /* Prevent text from being cut off */
+}
+
+/* Category legend to allow text wrapping */
+.category-legend {
+    word-wrap: break-word; /* Ensure text breaks into the next line if needed */
+    white-space: normal; /* Allow text to wrap */
+}
